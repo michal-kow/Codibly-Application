@@ -1,23 +1,19 @@
-import logo from './logo.svg';
+import { useState } from 'react';
 import './App.css';
+import FilterComponent from './Components/FilterComponent/FilterComponent';
+import TableComponent from './Components/TableComponent/TableComponent';
+import PaginationComponent from './Components/PaginationComponent/PaginationComponent';
 
 function App() {
+
+  const [input, setInput] = useState('');
+  const [pageNr, setPageNr] = useState(1);
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <FilterComponent input={input} setInput={setInput}/>
+      <TableComponent input={input} pageNr={pageNr}/>
+      <PaginationComponent pageNr={pageNr} setPageNr={setPageNr}/>
     </div>
   );
 }

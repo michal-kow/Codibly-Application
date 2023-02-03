@@ -1,0 +1,18 @@
+.FilterComponent {
+    display: flex;
+    justify-content: center;
+
+    .wrapper {
+        padding: 10px;
+
+        h2 {
+            display: inline;
+            margin: 0;
+            margin-right: 10px;
+        }
+
+        input {
+            transform: translateY(-10%);
+        }
+    }
+}

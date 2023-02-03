@@ -1,0 +1,37 @@
+.PaginationComponent {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+
+    .wrapper {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+
+        button {
+            border: none;
+            background-color: transparent;
+            font-size: 18px;
+            margin: 0 30px;
+            padding: 5px 10px;
+
+            &.clickable {
+                &:hover {
+                    cursor: pointer;
+                }
+            }
+
+            &.unclickable {
+                pointer-events: none;
+                color: #aaa;
+            }
+        }
+        
+        p {
+            font-size: 18px;
+            margin: 0 30px;
+            padding: 5px 10px;
+            font-weight: 700;
+        }
+    }
+}
